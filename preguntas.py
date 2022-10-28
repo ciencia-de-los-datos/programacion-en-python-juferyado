@@ -14,9 +14,10 @@ Utilice el archivo `data.csv` para resolver las preguntas.
 
 
 
-x = open("./data.csv", "r").readlines()
+
 
 def pregunta_01():
+    x = open("./data.csv", "r").readlines()
     # Eliminamos saltos de linea
     x = [z.replace("\n", "") for z in x]
     # Separamos por el delimitador 
@@ -38,6 +39,7 @@ def pregunta_02():
 
 
 def pregunta_03():
+    x = open("./data.csv", "r").readlines()
     with open('data.csv', 'r') as f:
         lines = f.readlines()
         rows = [line.split('\t') for line in lines]
