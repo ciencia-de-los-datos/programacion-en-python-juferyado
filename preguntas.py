@@ -1,20 +1,3 @@
-"""
-Laboratorio de Programación Básica en Python para Manejo de Datos
------------------------------------------------------------------------------------------
-
-Este archivo contiene las preguntas que se van a realizar en el laboratorio.
-
-No puede utilizar pandas, numpy o scipy. Se debe utilizar solo las funciones de python
-básicas.
-
-Utilice el archivo `data.csv` para resolver las preguntas.
-
-
-"""
-
-
-
-
 
 def pregunta_01():
     x = open("./data.csv", "r").readlines()
@@ -30,6 +13,7 @@ def pregunta_01():
 
 
 def pregunta_02():
+    x = open("./data.csv", "r").readlines()
     column1=[x[0] for x in x ]
     from collections import Counter
     listatuple = Counter(column1)
@@ -39,7 +23,6 @@ def pregunta_02():
 
 
 def pregunta_03():
-    x = open("./data.csv", "r").readlines()
     with open('data.csv', 'r') as f:
         lines = f.readlines()
         rows = [line.split('\t') for line in lines]
@@ -53,7 +36,6 @@ def pregunta_03():
 
     listatuple = [(k, v) for k, v in d.items()]
     listatuple.sort()
-
     return listatuple
 
 def pregunta_04():
